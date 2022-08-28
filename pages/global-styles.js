@@ -25,7 +25,7 @@ export default createGlobalStyle`
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
   small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
+  b, u, i, center, option
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   caption, tbody, tfoot, thead, tr, th, td,
@@ -58,7 +58,7 @@ export default createGlobalStyle`
     line-height: 1.25;
     background: #222;
     color: white;
-    padding: 5px;
+    padding: 7px;
   }
   a {
     color: #69ffcf;
