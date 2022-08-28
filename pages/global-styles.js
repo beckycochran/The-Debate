@@ -20,7 +20,7 @@ export default createGlobalStyle`
       v2.0 | 20110126
       License: none (public domain)
   */
-  html, body, div, span, applet, object, iframe,
+  html, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
@@ -58,6 +58,7 @@ export default createGlobalStyle`
     line-height: 1.25;
     background: #222;
     color: white;
+    padding: 5px;
   }
   a {
     color: #69ffcf;
