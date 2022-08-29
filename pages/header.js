@@ -6,8 +6,9 @@ const Header = () => {
     const [isShown, setIsShown] = useState(false)
     return (
         <Wrapper>
-            The Debate
-            <Menu
+            <Title>The Debate</Title>
+            <Debates>Debates</Debates>
+            {/* <Menu
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}>
                 Your Debate
@@ -16,7 +17,7 @@ const Header = () => {
                 <Dropdown>
                     <MenuItems />
                 </Dropdown>
-                )}
+                )} */}
         </Wrapper>
     )
 }
@@ -34,15 +35,24 @@ const MenuItems = () => {
 
 const Wrapper = styled.div`
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-direction: row;
     justify-content: space-between;
     width: 99vw;
-    height: 50px;
+    height: 7vh;
+    margin-bottom: 10px;
     border-bottom: 3px solid white;
-    display: flex;
     font-weight: bold;
 `
+const Title = styled.div`
+display: inline-block;
+`;
+const Debates = styled(Title)`
+background: white;
+color: black;
+height: 100%;
+`
+
 const Menu = styled.div`
 background: inherit;
 color: inherit;
