@@ -12,7 +12,7 @@ const Body = () => {
 }
 
 const Arguments = () => {
-    const args = [...Array(5)].map(()=> Math.floor(Math.random()*99))
+    const args = [...Array(7)].map(()=> Math.floor(Math.random()*99))
     const sections = ["Pro", "Against"]
     return (
         <>
@@ -61,9 +61,13 @@ color: cyan;
 `
 const Arg = styled.span`
 font-weight: bold;
+color: #159ab7;
 `
 const Args = styled.span`
-background: cyan;
-color: grey;
+width: 80%;
+padding: .5% 1%;
+margin: 1% 0;
+background: #9ac5d3;
+color: #141e26;
 `
 export default Body;
