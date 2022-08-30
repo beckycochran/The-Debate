@@ -6,72 +6,41 @@ const Header = () => {
     const [isShown, setIsShown] = useState(false)
     return (
         <Wrapper>
+            <HeaderContent>
             <Title>The Debate</Title>
             <Debates>Debates</Debates>
-            {/* <Menu
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}>
-                Your Debate
-            </Menu>
-                {isShown && (
-                <Dropdown>
-                    <MenuItems />
-                </Dropdown>
-                )} */}
+            </HeaderContent>
         </Wrapper>
     )
 }
 
-const MenuItems = () => {
-    const topics = ["Are we living in a simulation?", "Is calligraphy obsolete?", "Do zygotes have souls from the moment of conception?"]
-    return (<>
-        {topics.map((topic) => (
-            <ItemWrapper />
-        ))
-        }</>)
 
-
-}
 
 const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+const HeaderContent = styled.div`
     display: flex;
     align-items: baseline;
     flex-direction: row;
     justify-content: space-between;
-    width: 99vw;
-    height: 7vh;
-    margin-bottom: 10px;
+    width: 98vw;
+    height: 6.5vh;
     border-bottom: 3px solid white;
     font-weight: bold;
+    // padding: 0 1%;
 `
 const Title = styled.div`
 display: inline-block;
+// margin: 0 .5%;
 `;
 const Debates = styled(Title)`
-background: white;
-color: black;
-height: 100%;
-`
-
-const Menu = styled.div`
-background: inherit;
-color: inherit;
-border: none;
-align-items: center;
-float: right;
-font-weight: bold;
-height: 50px;
-`
-
-const Dropdown = styled.div`
-position: absolute;
-z-index: 500;
-background: grey;
-height: 100px;
-
-`
-const ItemWrapper = styled.option`
-    background: light-grey;
+&:hover{
+    color: grey;
+    cursor: pointer;
+}
 `
 
 export default Header;

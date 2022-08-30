@@ -58,7 +58,6 @@ export default createGlobalStyle`
     line-height: 1.25;
     background: #222;
     color: white;
-    padding: 7px;
   }
   a {
     color: #69ffcf;
