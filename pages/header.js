@@ -1,14 +1,11 @@
 import styled from "styled-components";
-import { useState } from "react";
-
 
 const Header = () => {
-    const [isShown, setIsShown] = useState(false)
     return (
         <Wrapper>
             <HeaderContent>
             <Title>The Debate</Title>
-            <Debates>Debates</Debates>
+            <Debates>Past Debates</Debates>
             </HeaderContent>
         </Wrapper>
     )
@@ -30,7 +27,7 @@ const HeaderContent = styled.div`
     height: 6.5vh;
     border-bottom: 3px solid white;
     font-weight: bold;
-    // padding: 0 1%;
+    margin-top: .5%;
 `
 const Title = styled.div`
 display: inline-block;
