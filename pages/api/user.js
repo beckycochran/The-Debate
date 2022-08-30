@@ -6,6 +6,6 @@
 
 // For example, the following API route pages/api/user.js returns a json response with a status code of 200:
 
-// export default function handler(req, res) {
-//   res.status(200).json({ name: 'John Doe' })
-// }
+export default function handler(req, res) {
+  res.status(200).json({ name: 'John Doe' })
+}
