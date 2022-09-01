@@ -1,8 +1,8 @@
-import GlobalStyles from "./global-styles";
+import GlobalStyles from "../global-styles";
 import Header from "./header";
 import Body from "./body";
 
-const Debate = () => {
+const Main = () => {
   return (
    <>
     <GlobalStyles />
@@ -12,4 +12,4 @@ const Debate = () => {
   )
 }
 
-export default Debate;
+export default Main;
