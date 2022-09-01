@@ -19,6 +19,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 background: #141e26;
+padding: 2% 0;
 `
 
 

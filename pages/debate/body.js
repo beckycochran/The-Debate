@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 80vh;
     display: flex;
-    margin-top: 1%;
+    margin-top: 5%;
 `
 
 const Debate = styled.span`

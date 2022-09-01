@@ -1,7 +1,7 @@
 import GlobalStyles from "../global-styles";
 import styled from "styled-components"
 import Synopsis from "./synopsis";
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 const InitialVote = () => {
     const router = useRouter()
     return (
@@ -11,8 +11,8 @@ const InitialVote = () => {
                 <Popup>
                     <Synopsis />
                     <VoteNow>
-                        <Vote onClick={()=>router.push('/debate/main')}>I agree</Vote>
-                        <Vote onClick={()=>router.push('/debate/main')}>I disagree</Vote>
+                        <Vote onClick={() => router.push('/debate/main')}>I agree</Vote>
+                        <Vote onClick={() => router.push('/debate/main')}>I disagree</Vote>
                     </VoteNow>
                 </Popup>
             </Wrapper>
