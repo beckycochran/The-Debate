@@ -7,8 +7,8 @@ const Index = () => {
     <>
       <Wrapper>
         <GlobalStyles />
-        <SLink href='/debate'>Click me to see the debate of the day</SLink>
-        <SLink href='/debate'>Archived Debates</SLink>
+        <SLink href='/debate/initial-vote'>Click me to see the debate of the day</SLink>
+        <SLink href='/debate/initial-vote'>Archived Debates</SLink>
       </Wrapper>
     </>
   )

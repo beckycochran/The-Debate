@@ -1,16 +1,18 @@
 import GlobalStyles from "../global-styles";
 import styled from "styled-components"
-
-const Index = () => {
+import Synopsis from "./synopsis";
+import {useRouter} from 'next/router';
+const InitialVote = () => {
+    const router = useRouter()
     return (
         <>
             <GlobalStyles />
             <Wrapper>
                 <Popup>
-                    debate synopsis
+                    <Synopsis />
                     <VoteNow>
-                        <Vote>I agree</Vote>
-                        <Vote>I disagree</Vote>
+                        <Vote onClick={()=>router.push('/debate/main')}>I agree</Vote>
+                        <Vote onClick={()=>router.push('/debate/main')}>I disagree</Vote>
                     </VoteNow>
                 </Popup>
             </Wrapper>
@@ -24,7 +26,7 @@ height: 100vh;
 width: 100vw;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 `
 
 const Popup = styled(Wrapper)`
@@ -32,6 +34,7 @@ const Popup = styled(Wrapper)`
  width: 70vw;
  background: #141e26;
  justify-content: space-evenly;
+ padding: 2%;
 `
 
 const VoteNow = styled.span`
@@ -39,10 +42,15 @@ const VoteNow = styled.span`
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    height: 20%;
+    margin: 2%;
 
 `
 const Vote = styled.button`
-border: none:
-
+border: none;
+width: 45%;
+height: 80%;
+background: #cbd8df;
+font-weight: bold;
 `
-export default Index;
+export default InitialVote;
