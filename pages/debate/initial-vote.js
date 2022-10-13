@@ -62,8 +62,8 @@ background: #cbd8df;
 font-weight: bold;
 &:hover {
     background: grey;
-    animation: ${scaleButton} 0.3s forwards
-    
+    animation: ${scaleButton} 0.3s forwards;
+    cursor: pointer;
 }
 `
 export default InitialVote;
