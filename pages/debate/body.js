@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TextButton } from "../../styles/styled-components";
 
 const Body = () => {
     return (
@@ -63,7 +64,7 @@ const Arg = styled.span`
 font-weight: bold;
 color: #159ab7;
 `
-const Args = styled.span`
+const Args = styled(TextButton)`
 width: 80%;
 padding: .5% 1%;
 margin: 1% 0;

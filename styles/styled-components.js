@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components"
-
-export const scaleButton = keyframes`
+const scaleButton = keyframes`
     from {
         transform:scale(1)
     }
@@ -8,4 +7,15 @@ export const scaleButton = keyframes`
         transform:scale(1.03)
     }
 `
+
+export const TextButton = styled.button`
+border: none;
+font-weight: bold;
+&:hover {
+    background: grey;
+    animation: ${scaleButton} 0.3s forwards;
+    cursor: pointer;
+}
+`
+
 

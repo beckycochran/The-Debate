@@ -1,5 +1,6 @@
 import GlobalStyles from "../global-styles";
 import styled, { keyframes } from "styled-components"
+import { TextButton } from "../../styles/styled-components";
 import Synopsis from "./synopsis";
 import { useRouter } from 'next/router';
 const InitialVote = () => {
@@ -45,25 +46,12 @@ width: 100%;
 height: 20%;
 margin: 2%;
 `
-const scaleButton = keyframes`
-    from {
-        transform:scale(1)
-    }
-    to {
-        transform:scale(1.03)
-    }
-`
 
-const Vote = styled.button`
-border: none;
+
+const Vote = styled(TextButton)`
 width: 45%;
 height: 80%;
 background: #cbd8df;
-font-weight: bold;
-&:hover {
-    background: grey;
-    animation: ${scaleButton} 0.3s forwards;
-    cursor: pointer;
-}
+
 `
 export default InitialVote;
