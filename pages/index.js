@@ -5,10 +5,10 @@ import styled from "styled-components"
 const Index = () => {
   return (
     <>
+      <GlobalStyles />
       <Wrapper>
-        <GlobalStyles />
-        <SLink href='/debate/initial-vote'>Click me to see the debate of the day</SLink>
-        <SLink href='/debate/initial-vote'>Archived Debates</SLink>
+        <GoToDebate href='/debate/initial-vote'>Click me to see the debate of the day</GoToDebate>
+        <ArchivedDebates href='/debate/initial-vote'>Archived Debates</ArchivedDebates>
       </Wrapper>
     </>
   )
@@ -22,8 +22,12 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 `
-const SLink = styled(Link)`  
+const GoToDebate = styled(Link)`  
 align-text: center;
+font-style:strong;
 `
-
+const ArchivedDebates = styled(GoToDebate)`  
+align-text: center;
+background-color: dark-grey;
+`
 export default Index;

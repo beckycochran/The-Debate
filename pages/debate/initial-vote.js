@@ -1,5 +1,6 @@
 import GlobalStyles from "../global-styles";
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+import { TextButton } from "../../styles/styled-components";
 import Synopsis from "./synopsis";
 import { useRouter } from 'next/router';
 const InitialVote = () => {
@@ -30,27 +31,27 @@ justify-content: space-evenly;
 `
 
 const Popup = styled(Wrapper)`
- height: 70vh;
- width: 70vw;
- background: #141e26;
- justify-content: space-evenly;
- padding: 2%;
+height: 70vh;
+width: 70vw;
+background: #141e26;
+justify-content: space-evenly;
+padding: 2%;
 `
 
 const VoteNow = styled.span`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 20%;
-    margin: 2%;
-
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 100%;
+height: 20%;
+margin: 2%;
 `
-const Vote = styled.button`
-border: none;
+
+
+const Vote = styled(TextButton)`
 width: 45%;
 height: 80%;
 background: #cbd8df;
-font-weight: bold;
+
 `
 export default InitialVote;
