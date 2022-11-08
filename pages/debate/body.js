@@ -31,22 +31,22 @@ const Arguments = () => {
 }
 
 
-const scale = keyframes`
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-`;
-const fade = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-`;
+// const scale = keyframes`
+//   from {
+//     transform: scale(0);
+//   }
+//   to {
+//     transform: scale(1);
+//   }
+// `;
+// const fade = keyframes`
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// `;
 
 const Wrapper = styled.div`
     display: flex;
@@ -89,7 +89,9 @@ padding: .5% 1%;
 margin: 1% 0;
 background: #9ac5d3;
 color: #141e26;
-animation: ${fade} 500ms ease-in forwards, ${scale} 300ms cubic-bezier(0.44, 0.11, 0.93, 0.72) forwards;
+
 
 `
+//// animation: ${fade} 500ms ease-in forwards, ${scale} 300ms cubic-bezier(0.44, 0.11, 0.93, 0.72) forwards;
+
 export default Body;
