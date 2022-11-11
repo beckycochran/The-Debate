@@ -1,10 +1,11 @@
 import GlobalStyles from "./global-styles";
 import Link from 'next/link';
 import styled from "styled-components"
-
+import Header from "../src/header";
 const Index = () => {
   return (
     <>
+      <Header />
       <GlobalStyles />
       <Wrapper>
         <GoToDebate href='/debate/initial-vote'>Click me to see the debate of the day</GoToDebate>

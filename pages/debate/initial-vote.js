@@ -1,5 +1,5 @@
 import GlobalStyles from "../global-styles";
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { TextButton } from "../../styles/styled-components";
 import Synopsis from "./synopsis";
 import { useRouter } from 'next/router';
