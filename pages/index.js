@@ -9,7 +9,7 @@ const Index = () => {
       <GlobalStyles />
       <Wrapper>
         <GoToDebate href='/debate/initial-vote'>Click me to see the debate of the day</GoToDebate>
-        <ArchivedDebates href='/debate/initial-vote'>Archived Debates</ArchivedDebates>
+        {/* <ArchivedDebates href='/debate/initial-vote'>Archived Debates</ArchivedDebates> */}
       </Wrapper>
     </>
   )
@@ -17,7 +17,7 @@ const Index = () => {
 
 const Wrapper = styled.div`
 display: flex;
-height: 100vh;
+height: 90vh;
 width: 100vw;
 flex-direction: column;
 align-items: center;

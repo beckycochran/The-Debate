@@ -1,10 +1,12 @@
 import styled from "styled-components";
-
+import { useRouter } from 'next/router';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const Header = () => {
+    const router = useRouter()
+
     return (
-        <LoginButton>
+        <LoginButton onClick={() => router.push('/login')}>
             Login
         </LoginButton>
     )
