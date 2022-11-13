@@ -1,17 +1,26 @@
 import GlobalStyles from "./global-styles";
-import Link from 'next/link';
 import styled from "styled-components"
-
-const Index = () => {
-  return (
-    <>
-      <GlobalStyles />
-      <Wrapper>
-        <GoToDebate href='/debate/initial-vote'>Click me to see the debate of the day</GoToDebate>
-        <ArchivedDebates href='/debate/initial-vote'>Archived Debates</ArchivedDebates>
-      </Wrapper>
-    </>
-  )
+import { TextButton } from "../styles/styled-components";
+import Synopsis from "./debate/synopsis";
+import Header from "../src/header";
+import { useRouter } from 'next/router';
+const InitialVote = () => {
+    const router = useRouter()
+    return (
+        <>
+            <GlobalStyles />
+            <Header />
+            <Wrapper>
+                <Popup>
+                    <Synopsis />
+                    <VoteNow>
+                        <Vote onClick={() => router.push('/debate/main')}>I agree</Vote>
+                        <Vote onClick={() => router.push('/debate/main')}>I disagree</Vote>
+                    </VoteNow>
+                </Popup>
+            </Wrapper>
+        </>
+    )
 }
 
 const Wrapper = styled.div`
@@ -20,14 +29,31 @@ height: 100vh;
 width: 100vw;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: space-evenly;
 `
-const GoToDebate = styled(Link)`  
-align-text: center;
-font-style:strong;
+
+const Popup = styled(Wrapper)`
+height: 70vh;
+width: 70vw;
+background: #141e26;
+justify-content: space-evenly;
+padding: 2%;
 `
-const ArchivedDebates = styled(GoToDebate)`  
-align-text: center;
-background-color: dark-grey;
+
+const VoteNow = styled.span`
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 100%;
+height: 20%;
+margin: 2%;
 `
-export default Index;
+
+
+const Vote = styled(TextButton)`
+width: 45%;
+height: 80%;
+background: #cbd8df;
+
+`
+export default InitialVote;
