@@ -3,16 +3,15 @@ import '../styles/globals.css'
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 // config.autoAddCss = false
 
-import { Auth0Provider } from '@auth0/auth0-react'
+import React from 'react'
+import { UserProvider } from '@auth0/nextjs-auth0'
+
 
 function MyApp({ Component, pageProps }) {
   return (
-    // <Auth0Provider
-    //   domain={ }
-    //   clientId={ }
-    //   redirectUri={'http://localhost/3000/debate/main'}>
+    <UserProvider>
       <Component {...pageProps} />
-    // </Auth0Provider> 
+    </UserProvider>
   )
 }
 
