@@ -6,7 +6,7 @@ const Header = () => {
     const router = useRouter()
 
     return (
-        <LoginButton onClick={() => router.push('/login')}>
+        <LoginButton onClick={() => router.push('/api/auth/login')}>
             Login
         </LoginButton>
     )

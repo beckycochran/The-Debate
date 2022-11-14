@@ -1,6 +1,4 @@
 // pages/api/auth/[...auth0].js
-<<<<<<< HEAD
-=======
 
 // handleAuth() creates the following routes:
 
@@ -11,7 +9,6 @@
 
 
 
->>>>>>> ba1e592f43e03c8047d9ec2f0d7c0aa76df585b3
 import { handleAuth } from '@auth0/nextjs-auth0';
 
 export default handleAuth();
