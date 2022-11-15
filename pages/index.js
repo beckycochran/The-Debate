@@ -1,10 +1,13 @@
 import GlobalStyles from "./global-styles";
 import styled from "styled-components"
 import { TextButton } from "../styles/styled-components";
-import Synopsis from "./debate/synopsis";
+import Synopsis from "../src/synopsis";
 import Header from "../src/header";
 import { useRouter } from 'next/router';
+import { debateMainRoute } from "../src/routes";
+
 const InitialVote = () => {
+
     const router = useRouter()
     return (
         <>
@@ -14,8 +17,8 @@ const InitialVote = () => {
                 <Popup>
                     <Synopsis />
                     <VoteNow>
-                        <Vote onClick={() => router.push('/debate/main')}>I agree</Vote>
-                        <Vote onClick={() => router.push('/debate/main')}>I disagree</Vote>
+                        <Vote onClick={() => router.push(debateMainRoute)}>I agree</Vote>
+                        <Vote onClick={() => router.push(debateMainRoute)}>I disagree</Vote>
                     </VoteNow>
                 </Popup>
             </Wrapper>
