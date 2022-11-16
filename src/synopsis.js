@@ -1,4 +1,4 @@
-import GlobalStyles from "../global-styles";
+import GlobalStyles from "../pages/global-styles";
 import styled from "styled-components"
 
 const Synopsis = () => {
