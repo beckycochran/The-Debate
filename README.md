@@ -22,7 +22,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 Run 
 ```bash
 yarn cypress
-#or
+# or
 npm run cypress
 ```
 in the command line to open up cypress for testing. Select e2e testing and run your tests in your preferred browser.

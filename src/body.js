@@ -4,7 +4,7 @@ import { TextButton } from "../styles/styled-components";
 const Body = () => {
     return (
         <Wrapper>
-            <Debate>The Debate Title</Debate>
+            <Debate>The water is turning the frogs gay</Debate>
             <SecWrapper>
                 <Arguments />
             </SecWrapper>

@@ -9,6 +9,11 @@ import { debateMainRoute } from "../src/routes";
 const InitialVote = () => {
 
     const router = useRouter()
+    
+    //store their voting response in session storage
+    const vote = () => {
+
+    }
     return (
         <>
             <GlobalStyles />
