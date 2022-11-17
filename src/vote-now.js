@@ -1,13 +1,24 @@
 import {TextButton} from "../styles/styled-components"
 import styled from "styled-components"
 import { useDispatch } from "react-redux"
-
+import { addToCart } from "../store/slices/orderSlice"
+import { debateMainRoute } from "./routes"
+import { useRouter } from "next/router"
 
 const VoteNow = () => {
+    const dispatch = useDispatch();
+    const router = useRouter();
+    
+    const addVoteHandler = (vote) => {
+        dispatch(addToCart({vote}));
+        router.push(debateMainRoute)
+    }
+
+
     return (
         <Wrapper>
-            <Vote onClick={() => router.push(debateMainRoute)}>I agree</Vote>
-            <Vote onClick={() => router.push(debateMainRoute)}>I disagree</Vote>
+            <Vote onClick={() => addVoteHandler("pro")}>I agree</Vote>
+            <Vote onClick={() => addVoteHandler("against")}>I disagree</Vote>
         </Wrapper>
     )
 }
