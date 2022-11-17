@@ -10,10 +10,7 @@ const InitialVote = () => {
 
     const router = useRouter()
     
-    //store their voting response in session storage
-    const vote = () => {
 
-    }
     return (
         <>
             <GlobalStyles />
