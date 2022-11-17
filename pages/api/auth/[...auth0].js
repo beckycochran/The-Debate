@@ -7,6 +7,12 @@
 // /api/auth/callback: The route Auth0 will redirect the user to after a successful login.
 // /api/auth/me: The route to fetch the user profile from.
 
+// http://localhost:3000/debate, http://localhost:3000, http://localhost:3000/api/auth/login
+// http://localhost:3000/debate
+// http://localhost:3000
+// http://localhost:3000/api/auth/login
+// http://localhost:3000/api/auth/callback
+
 
 
 import { handleAuth } from '@auth0/nextjs-auth0';

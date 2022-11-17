@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+
 const scaleButton = keyframes`
     from {
         transform:scale(1)
@@ -7,7 +8,6 @@ const scaleButton = keyframes`
         transform:scale(1.03)
     }
 `
-
 export const TextButton = styled.button`
 border: none;
 font-weight: bold;
@@ -17,5 +17,3 @@ font-weight: bold;
     cursor: pointer;
 }
 `
-
-

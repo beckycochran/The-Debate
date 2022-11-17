@@ -1,17 +1,27 @@
-import styled from "styled-components";
+import { Wrapper, Welcome, ButtonContainer, Button } from '../styles/header-styles';
 import { useRouter } from 'next/router';
-import { loginRoute, logoutRoute } from "./routes";
+import { loginRoute, logoutRoute, debateRoute } from "./routes";
 import { useUser } from "@auth0/nextjs-auth0";
-import { debateMainRoute } from "../src/routes";
+import { useEffect } from "react";
+import { updateUser } from "../store/slices/userSlice";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
     const router = useRouter()
-    const { user } = useUser({ redirectTo: debateMainRoute })
-    console.log("User:", user)
+    const dispatch = useDispatch()
+    const { user } = useUser({ redirectTo: debateRoute })
 
     const userOption = !user ? "Login" : "Logout";
     const userRoute = !user ? loginRoute : logoutRoute;
+    console.log(`debate route: ${debateRoute}\n`);
+    console.log('user route: ' + userRoute)
 
+
+    useEffect(() => {
+        if (user) {
+            dispatch(updateUser(user))
+        }
+    }, [user])
 
     return (
         <Wrapper>
@@ -27,30 +37,3 @@ const Header = () => {
 }
 
 export default Header;
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.5% 1%;
-    font-size: 3vh;
-    color: white;
-`
-const Welcome = styled.div``
-
-const ButtonContainer = styled.span`
-position: relative;
-float: right;
-`
-const Button = styled.button`
-    border:none;
-    z-index:-1;
-    background-color:inherit;
-    color: white;
-    font-size: 3vh;
-
-    &:hover {
-    font-weight: bold;
-    opacity: 0.8;
-    cursor: pointer;
-    }
-`

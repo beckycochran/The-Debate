@@ -1,97 +1,41 @@
-import styled from "styled-components";
 import { TextButton } from "../styles/styled-components";
+import { useSelector } from "react-redux";
+import { selectVote } from "../store/slices/userSlice";
+import { useRouter } from "next/router"
+import { Wrapper, SecWrapper, Debate, Section, Arg, Args, Join } from "../styles/debate-styles";
 
 const Body = () => {
     return (
         <Wrapper>
             <Debate>The water is turning the frogs gay</Debate>
-            <SecWrapper>
-                <Arguments />
-            </SecWrapper>
+            <Arguments />
         </Wrapper>
     )
 }
 
 const Arguments = () => {
-    const args = [...Array(7)].map(()=> Math.floor(Math.random()*99))
+    const router = useRouter()
+    const currentVote = useSelector(selectVote)
+    const args = ["Placeholder argument", "Placeholder rebuttal"]
     const sections = ["Pro", "Against"]
+
     return (
-        <>
-        {sections.map((s)=>(
-            <Section>
-                <Arg>{s}</Arg>
-                {args.map((arg)=>(
-                    <Args>This is my argument</Args>
-                ))}
-            </Section>
-        ))}
-        </>
+        <SecWrapper>
+            {sections.map((s) => (
+                <Section>
+                    <Arg>{s}</Arg>
+                    {args.map((arg) => (
+                        <Args>This is my argument</Args>
+                    ))}
+
+                    {s.toLowerCase() === currentVote && (
+                        <Join onClick={()=> router.push(`/discussion/${currentVote}`)}>Join the conversation</Join>
+                    )}
+                </Section>
+            ))}
+        </SecWrapper>
     )
 
 }
-
-
-// const scale = keyframes`
-//   from {
-//     transform: scale(0);
-//   }
-//   to {
-//     transform: scale(1);
-//   }
-// `;
-// const fade = keyframes`
-//   from {
-//     opacity: 1;
-//   }
-//   to {
-//     opacity: 0;
-//   }
-// `;
-
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    margin-top: 5%;
-`
-
-const Debate = styled.span`
-display: flex;
-justify-content: center;
-font-weight: bold;
-font-size; 32pt;
-width: 100%;
-// min-height: 20vh;
-`
-const SecWrapper = styled(Wrapper)`
-flex-direction: row;
-align-items: flex-start;
-`
-const Section = styled.div`
-display:flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-width: 50vw;
-color: cyan;
-`
-const Arg = styled.span`
-font-weight: bold;
-color: #159ab7;
-`
-const Args = styled(TextButton)`
-width: 80%;
-padding: .5% 1%;
-margin: 1% 0;
-background: #9ac5d3;
-color: #141e26;
-
-
-`
-//// animation: ${fade} 500ms ease-in forwards, ${scale} 300ms cubic-bezier(0.44, 0.11, 0.93, 0.72) forwards;
 
 export default Body;

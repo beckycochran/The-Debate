@@ -1,12 +1,15 @@
-import GlobalStyles from "./global-styles";
+import GlobalStyles from "../styles/global-styles";
 import Body from "../src/body";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Header from "../src/header";
-
 import Synopsis from "../src/synopsis";
+import { useSelector } from "react-redux";
+import { selectUser, selectVote} from "../store/slices/userSlice";
+
 const Debate = () => {
-  const router = useRouter()
+
+  const currentVote = useSelector(selectVote)
+  const {nickname, name, picture, updated_at} = useSelector(selectUser)
+
   return (
     <>
       <Header />

@@ -1,26 +1,12 @@
-import GlobalStyles from "../pages/global-styles";
-import styled from "styled-components"
+import GlobalStyles from "../styles/global-styles";
+import { SynopsisWrapper } from "../styles/home-styles";
 
 const Synopsis = () => {
     return (
-        <>
-            <Wrapper>
+            <SynopsisWrapper>
                 This is the argument
-            </Wrapper>
-        </>
+            </SynopsisWrapper>
     )
 }
-
-const Wrapper = styled.div`
-display: flex;
-height: 100%;
-width: 100%;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background: #141e26;
-padding: 2% 0;
-`
-
 
 export default Synopsis;

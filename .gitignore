@@ -28,8 +28,9 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
+# environment variables
 .env*.local
+cypress.env.json
 
 # vercel
 .vercel
