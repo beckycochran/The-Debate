@@ -3,7 +3,7 @@ import Body from "../src/body";
 import Header from "../src/header";
 import { useSelector } from "react-redux";
 import Synopsis from "../src/synopsis";
-import { selectTotal } from "../store/slices/orderSlice";
+import { selectTotal } from "../store/slices/userSlice";
 
 const Debate = () => {
 

@@ -1,7 +1,7 @@
 import {TextButton} from "../styles/styled-components"
 import styled from "styled-components"
 import { useDispatch } from "react-redux"
-import { addToCart } from "../store/slices/orderSlice"
+import { addToCart } from "../store/slices/userSlice"
 import { debateMainRoute } from "./routes"
 import { useRouter } from "next/router"
 
