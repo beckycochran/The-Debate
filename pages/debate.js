@@ -3,15 +3,18 @@ import Body from "../src/body";
 import Header from "../src/header";
 import { useSelector } from "react-redux";
 import Synopsis from "../src/synopsis";
-import { selectVote } from "../store/slices/userSlice";
+import { selectVote} from "../store/slices/userSlice";
 
 const Debate = () => {
 
   const currentVote = useSelector(selectVote)
 
+
   return (
     <>
-    {console.log(`Current vote: ${currentVote.vote}`)}
+    {console.log(`Current vote: ${currentVote}`)}
+    {/* {console.log(`Name: ${currentVote.name}`)} */}
+
       <Header />
       <GlobalStyles />
       {/* <Synopsis /> */}

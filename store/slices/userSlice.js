@@ -3,7 +3,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    vote: "not-voted"
+    vote: "not-voted",
+    name: "rebekah"
 }
 
 export const userSlice = createSlice({
@@ -57,6 +58,7 @@ export const { changeVote } = userSlice.actions;
 // export default cartSlice.reducer;
 
 
-export const selectVote = (state) => state.vote;
+export const selectVote = (state) => state.user.vote;
+
 
 export default userSlice.reducer

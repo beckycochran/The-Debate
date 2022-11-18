@@ -5,6 +5,6 @@ import userVoteReducer from "./slices/userSlice";
 export const store = configureStore({
   reducer: {
     //reducers are defined here
-    vote: userVoteReducer,
+    user: userVoteReducer,
   },
 });
