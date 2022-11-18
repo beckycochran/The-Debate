@@ -4,40 +4,33 @@ import { useSelector } from "react-redux";
 import { selectVote } from "../store/slices/userSlice";
 
 const Body = () => {
-
-
     return (
         <Wrapper>
             <Debate>The water is turning the frogs gay</Debate>
-            <SecWrapper>
-                <Arguments />
-            </SecWrapper>
+            <Arguments />
         </Wrapper>
     )
 }
 
 const Arguments = () => {
     const currentVote = useSelector(selectVote)
-
-    const args = [...Array(7)].map(() => Math.floor(Math.random() * 99))
+    const args = [...Array(1)].map(() => Math.floor(Math.random() * 99))
     const sections = ["Pro", "Against"]
 
     return (
-        <>
+        <SecWrapper>
             {sections.map((s) => (
-                <>
-                    <Section>
-                        <Arg>{s}</Arg>
-                        {args.map((arg) => (
-                            <Args>This is my argument</Args>
-                        ))}
+                <Section>
+                    <Arg>{s}</Arg>
+                    {args.map((arg) => (
+                        <Args>This is my argument</Args>
+                    ))}
                     {s.toLowerCase() === currentVote && (
                         <Join>Join the conversation</Join>
                     )}
-                    </Section>
-                </>
+                </Section>
             ))}
-        </>
+        </SecWrapper>
     )
 
 }
@@ -52,6 +45,11 @@ const Wrapper = styled.div`
     display: flex;
     margin-top: 5%;
 `
+const SecWrapper = styled(Wrapper)`
+flex-direction: row;
+align-items: flex-start;
+margin-top: 5%;
+`
 
 const Debate = styled.span`
 display: flex;
@@ -59,11 +57,6 @@ justify-content: center;
 font-weight: bold;
 font-size; 32pt;
 width: 100%;
-// min-height: 20vh;
-`
-const SecWrapper = styled(Wrapper)`
-flex-direction: row;
-align-items: flex-start;
 `
 const Section = styled.div`
 display:flex;
