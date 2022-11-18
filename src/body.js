@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { TextButton } from "../styles/styled-components";
 import { useSelector } from "react-redux";
 import { selectVote } from "../store/slices/userSlice";
+import { useRouter } from "next/router"
 
 const Body = () => {
     return (
@@ -13,6 +14,7 @@ const Body = () => {
 }
 
 const Arguments = () => {
+    const router = useRouter()
     const currentVote = useSelector(selectVote)
     const args = [...Array(1)].map(() => Math.floor(Math.random() * 99))
     const sections = ["Pro", "Against"]
@@ -25,8 +27,9 @@ const Arguments = () => {
                     {args.map((arg) => (
                         <Args>This is my argument</Args>
                     ))}
+                    {console.log(`Current Vote: ${currentVote}`)}
                     {s.toLowerCase() === currentVote && (
-                        <Join>Join the conversation</Join>
+                        <Join onClick={()=> router.push(`/discussion/${currentVote}`)}>Join the conversation</Join>
                     )}
                 </Section>
             ))}
