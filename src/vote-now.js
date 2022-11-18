@@ -10,7 +10,7 @@ const VoteNow = () => {
     const router = useRouter();
     
     const addVoteHandler = (vote) => {
-        dispatch(addToCart({vote}));
+        dispatch(addToCart(vote, {type: "user-vote"}));
         router.push(debateMainRoute)
     }
 

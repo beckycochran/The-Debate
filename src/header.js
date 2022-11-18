@@ -7,7 +7,7 @@ import { debateMainRoute } from "../src/routes";
 const Header = () => {
     const router = useRouter()
     const { user } = useUser({ redirectTo: debateMainRoute })
-    console.log("User:", user)
+    // console.log("User:", user)
 
     const userOption = !user ? "Login" : "Logout";
     const userRoute = !user ? loginRoute : logoutRoute;
