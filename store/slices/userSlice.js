@@ -13,8 +13,13 @@ export const userSlice = createSlice({
         //Actions
         //change vote
         changeVote: (state, action) => {
-            state.vote = action.payload;
+            console.log(state, action)
+            state.vote = action.payload
         },
+        //update user info
+        // updateCurrentUser: (state, action) => {
+        //     state
+        // }
         // addToCart: (state, action) => {
         //     console.log(`State: ${state.items}, Actions: ${action.type}`)
         //     state.items = [...state.items, action.type]
@@ -32,7 +37,7 @@ export const userSlice = createSlice({
         //             `can't remove item(id: ${action.type.id}) as it's not in order`
         //         );
         //     }
-          //  state.items = newCart;
+        //  state.items = newCart;
         //},  any other actions here
     },
 });

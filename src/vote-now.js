@@ -1,16 +1,15 @@
 import {TextButton} from "../styles/styled-components"
 import styled from "styled-components"
 import { useDispatch } from "react-redux"
-import { addToCart } from "../store/slices/userSlice"
+import { changeVote } from "../store/slices/userSlice"
 import { debateMainRoute } from "./routes"
 import { useRouter } from "next/router"
 
 const VoteNow = () => {
     const dispatch = useDispatch();
     const router = useRouter();
-    
     const addVoteHandler = (vote) => {
-        dispatch(addToCart(vote, {type: "user-vote"}));
+        dispatch(changeVote(vote));
         router.push(debateMainRoute)
     }
 
