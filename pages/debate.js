@@ -13,13 +13,10 @@ const Debate = () => {
   return (
     <>
     {console.log(`Current vote: ${currentVote}`)}
-    {/* {console.log(`Name: ${currentVote.name}`)} */}
-
       <Header />
       <GlobalStyles />
       {/* <Synopsis /> */}
       <Body />
-      {/* <h1>the vote is {currentVote}</h1> */}
     </>
   )
 }
