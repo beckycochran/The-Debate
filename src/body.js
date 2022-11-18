@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { TextButton } from "../styles/styled-components";
+import { useSelector } from "react-redux";
+import { selectVote } from "../store/slices/userSlice";
 
 const Body = () => {
+
+
     return (
         <Wrapper>
             <Debate>The water is turning the frogs gay</Debate>
@@ -13,40 +17,30 @@ const Body = () => {
 }
 
 const Arguments = () => {
-    const args = [...Array(7)].map(()=> Math.floor(Math.random()*99))
+    const currentVote = useSelector(selectVote)
+
+    const args = [...Array(7)].map(() => Math.floor(Math.random() * 99))
     const sections = ["Pro", "Against"]
+
     return (
         <>
-        {sections.map((s)=>(
-            <Section>
-                <Arg>{s}</Arg>
-                {args.map((arg)=>(
-                    <Args>This is my argument</Args>
-                ))}
-            </Section>
-        ))}
+            {sections.map((s) => (
+                <>
+                    <Section>
+                        <Arg>{s}</Arg>
+                        {args.map((arg) => (
+                            <Args>This is my argument</Args>
+                        ))}
+                    {s.toLowerCase() === currentVote && (
+                        <Join>Join the conversation</Join>
+                    )}
+                    </Section>
+                </>
+            ))}
         </>
     )
 
 }
-
-
-// const scale = keyframes`
-//   from {
-//     transform: scale(0);
-//   }
-//   to {
-//     transform: scale(1);
-//   }
-// `;
-// const fade = keyframes`
-//   from {
-//     opacity: 1;
-//   }
-//   to {
-//     opacity: 0;
-//   }
-// `;
 
 const Wrapper = styled.div`
     display: flex;
@@ -89,9 +83,11 @@ padding: .5% 1%;
 margin: 1% 0;
 background: #9ac5d3;
 color: #141e26;
-
-
 `
-//// animation: ${fade} 500ms ease-in forwards, ${scale} 300ms cubic-bezier(0.44, 0.11, 0.93, 0.72) forwards;
-
+const Join = styled(TextButton)`
+width: 45%;
+height: 11vh;
+margin: 2% 0;
+background: #cbd8df;
+`
 export default Body;

@@ -1,8 +1,8 @@
 import GlobalStyles from "./global-styles";
 import Body from "../src/body";
 import Header from "../src/header";
-import { useSelector } from "react-redux";
 import Synopsis from "../src/synopsis";
+import { useSelector } from "react-redux";
 import { selectVote} from "../store/slices/userSlice";
 
 const Debate = () => {
@@ -12,7 +12,6 @@ const Debate = () => {
 
   return (
     <>
-    {console.log(`Current vote: ${currentVote}`)}
       <Header />
       <GlobalStyles />
       {/* <Synopsis /> */}
