@@ -1,13 +1,17 @@
 import '../styles/globals.css'
 import React from 'react'
 import { UserProvider } from '@auth0/nextjs-auth0'
+import { store } from "../store/store"
+import { Provider } from "react-redux"
 
 
 function MyApp({ Component, pageProps }) {
   return (
-    <UserProvider>
-      <Component {...pageProps} />
-    </UserProvider>
+    <Provider store={store}>
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
+    </Provider>
   )
 }
 
