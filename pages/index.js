@@ -14,10 +14,10 @@ const InitialVote = () => {
             <GlobalStyles />
             <Header />
             <Wrapper>
-                <Popup>
+                {/* <Popup> */}
                     <Synopsis />
                     <VoteNow />
-                </Popup>
+                {/* </Popup> */}
             </Wrapper>
         </>
     )

@@ -13,9 +13,6 @@ const Header = () => {
 
     const userOption = !user ? "Login" : "Logout";
     const userRoute = !user ? loginRoute : logoutRoute;
-    console.log(`debate route: ${debateRoute}\n`);
-    console.log('user route: ' + userRoute)
-
 
     useEffect(() => {
         if (user) {

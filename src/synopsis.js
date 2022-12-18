@@ -4,7 +4,7 @@ import { SynopsisWrapper } from "../styles/home-styles";
 const Synopsis = () => {
     return (
             <SynopsisWrapper>
-                This is the argument
+                This is the argument summary
             </SynopsisWrapper>
     )
 }
