@@ -26,6 +26,9 @@ export const Optn = styled.div`
 display flex;
 flex-direction: row;
 justify-content: space-between;
+// background-image: linear-gradient(to right, #74a892, #222);
+
+padding: 1%;
 `
 export const radioColors = {
     pro: {
@@ -46,8 +49,8 @@ width: 5%;
 background: #e5c185;
 `
 export const SubmitBtn = styled(TextButton)`
-margin-left: 90%;
-height: 14%;
+margin-left: 80%;
+height: 7%;
 float: right;
 width: 20%;
 border: none;

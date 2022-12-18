@@ -26,18 +26,20 @@ const VoteNow = () => {
         })
     }
     return (
+        <>
         <VoteWrapper>
-            <Optn>
+            <Optn style={{background: option.selected === 'pro' ? "linear-gradient(to right, #74a892, #222)": "none" }}>
                 Agree <Vote type='radio' value='pro' checked={option.selected === 'pro'} onChange={handleOptionChange} style={radioColors.pro} />
             </Optn>
-            <Optn>
+            <Optn style={{background: option.selected === 'against' ? "linear-gradient(to right, #c7522a, #222)": "none" }}>
                 Disagree <Vote type='radio' value='against' checked={option.selected === 'against'} onChange={handleOptionChange} style={radioColors.against} />
             </Optn>
-            <Optn>
+            <Optn style={{background: option.selected === 'abstain' ? "linear-gradient(to right, #e5c185, #222)": "none" }}>
                 Abstain / View discussion <Vote type='radio' value='abstain' checked={option.selected === 'abstain'} onChange={handleOptionChange} style={radioColors.abstain} />
             </Optn>
-            {option.selected && <SubmitBtn onClick={addVoteHandler} style={{backgroundColor: radioColors[option.selected].accentColor}}>Submit</SubmitBtn>}
         </VoteWrapper>
+            {option.selected && <SubmitBtn onClick={addVoteHandler} style={{backgroundColor: radioColors[option.selected].accentColor}}>Submit</SubmitBtn>}
+        </>
     )
 }
 
