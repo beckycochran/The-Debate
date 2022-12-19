@@ -1,4 +1,4 @@
-import { Vote, VoteWrapper, Optn, SubmitBtn, radioColors } from "../styles/home-styles"
+import { Vote, VoteWrapper, Optn, SubmitBtn, BtnWrapper, radioColors } from "../styles/home-styles"
 import { changeVote } from "../store/slices/userSlice"
 import { debateRoute, loginRoute } from "./routes"
 import { useDispatch } from "react-redux"
@@ -38,7 +38,7 @@ const VoteNow = () => {
                 Abstain / View discussion <Vote type='radio' value='abstain' checked={option.selected === 'abstain'} onChange={handleOptionChange} style={radioColors.abstain} />
             </Optn>
         </VoteWrapper>
-            {option.selected && <SubmitBtn onClick={addVoteHandler} style={{backgroundColor: radioColors[option.selected].accentColor}}>Submit</SubmitBtn>}
+            <BtnWrapper>{option.selected && <SubmitBtn onClick={addVoteHandler} style={{backgroundColor: radioColors[option.selected].accentColor}}>Submit</SubmitBtn>}</BtnWrapper>
         </>
     )
 }

@@ -1,5 +1,4 @@
-import styled, { keyframes } from "styled-components"
-import { TextButton } from "./styled-components"
+import styled from "styled-components"
 
 // pages/index.js
 export const Wrapper = styled.div`
@@ -20,6 +19,9 @@ height: 40%;
 width: 100%;
 @media (min-width: 1200px) {
     max-width: 835px; 
+}
+@media (min-height: 570px) {
+    max-height: 200px;
 }
 `
 export const Optn = styled.div`
@@ -46,16 +48,24 @@ height: 100%;
 width: 5%;
 background: #e5c185;
 `
+export const BtnWrapper = styled.div`
+display: flex;
+width: 100%;
+height: 6%;
+flex-direction: row;
+justify-content: flex-end;
+@media (min-width: 1200px) {
+    max-width: 835px; 
+}
+`
 export const SubmitBtn = styled.button`
 margin-left: 80%;
-height: 6%;
-float: right;
 width: 20%;
 max-width: 130px;
 border: none;
 font: inherit;
 border-radius: 3pt;
-padding-bottom: 4%;
+display: inline-block;
 &:hover {
     opacity: 0.6;
     font-color: #282828; 
@@ -70,8 +80,6 @@ width: 100%;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-//background: #141e46; //(dark blue)
-//background: #e5c185;
 background: #e5ebf1;
 color: #222;
 padding: 2% 0;
