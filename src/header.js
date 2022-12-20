@@ -5,6 +5,8 @@ import { useUser } from "@auth0/nextjs-auth0";
 import { useEffect } from "react";
 import { updateUser } from "../store/slices/userSlice";
 import { useDispatch } from "react-redux";
+import { useSpring, animated } from '@react-spring/web'
+import styled from 'styled-components';
 
 const Header = () => {
     const router = useRouter()
@@ -23,9 +25,14 @@ const Header = () => {
     return (
         <Wrapper>
             {user && <Welcome>Welcome {user.name}</Welcome>}
-            <ButtonContainer>
+            {/* <ButtonContainer>
                 <Button onClick={() => router.push(userRoute)}>
                     {userOption}
+                </Button>
+            </ButtonContainer> */}
+            <ButtonContainer>
+                <Button>
+                    <I src="/menu.png" alt="menu" />
                 </Button>
             </ButtonContainer>
         </Wrapper>
@@ -33,4 +40,9 @@ const Header = () => {
     )
 }
 
+const I = styled.img`
+background-color: inherit;
+min-height: 30px;
+max-height: 50px;
+`
 export default Header;

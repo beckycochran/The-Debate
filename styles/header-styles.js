@@ -12,8 +12,6 @@ export const Wrapper = styled.div`
 export const Welcome = styled.div``
 
 export const ButtonContainer = styled.span`
-position: relative;
-float: right;
 `
 export const Button = styled.button`
     border:none;
@@ -21,7 +19,7 @@ export const Button = styled.button`
     background-color:inherit;
     color: white;
     font-size: 3vh;
-
+    padding: 1vh;
     &:hover {
     font-weight: bold;
     opacity: 0.8;
