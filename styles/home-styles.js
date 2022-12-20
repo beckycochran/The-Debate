@@ -29,6 +29,7 @@ display flex;
 flex-direction: row;
 justify-content: space-between;
 padding: 1%;
+font-size: 1.2em;
 `
 export const radioColors = {
     pro: {
@@ -75,14 +76,16 @@ display: inline-block;
 // src/synopsis.js
 export const SynopsisWrapper = styled.div`
 display: flex;
-height: 50%;
+height: 45%;
 width: 100%;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+text-align: center;
 background: #e5ebf1;
 color: #222;
 padding: 2% 0;
+font-size: 1.4em;
 @media (min-width: 1200px) {
     max-width: 835px; 
 }

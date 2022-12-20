@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     padding: 0.5% 1%;
     font-size: 3vh;
     color: white;
+    z-index: 5;
 `
 export const Welcome = styled.div``
 
@@ -25,4 +26,19 @@ export const Button = styled.button`
     opacity: 0.8;
     cursor: pointer;
     }
+`
+//src/menu.js
+export const MenuWrapper = styled.div`
+height: 33vh;
+min-width: 100px;
+position: relative;
+display: inline-block;
+z-index: 10;
+position: absolute;
+margin-left: 2vw;
+font: inherit;
+`
+export const LI = styled(Button)`
+width: 100%;
+text-align: left;
 `
