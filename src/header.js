@@ -28,17 +28,12 @@ const Header = () => {
     return (
         <>
             <Wrapper>
-                {user && <Welcome>Welcome {user.name}</Welcome>}
-                {/* <ButtonContainer>
-                <Button onClick={() => router.push(userRoute)}>
-                {userOption}
-                </Button>
-            </ButtonContainer> */}
                 <ButtonContainer>
                     <Button onClick={() => setToggleMenu(!toggleMenu)}>
                         <I src="/menu.png" alt="menu" />
                     </Button>
                 </ButtonContainer>
+                {user && <Welcome>Welcome {user.name}</Welcome>}
             </Wrapper>
             {toggleMenu && <Menu />}
         </>

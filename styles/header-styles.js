@@ -29,14 +29,16 @@ export const Button = styled.button`
 `
 //src/menu.js
 export const MenuWrapper = styled.div`
-height: 33vh;
+height: auto;
 min-width: 100px;
+max-width: 150px;
 position: relative;
 display: inline-block;
 z-index: 10;
 position: absolute;
 margin-left: 2vw;
 font: inherit;
+background: rgba(34, 34, 34, 0.5)
 `
 export const LI = styled(Button)`
 width: 100%;
