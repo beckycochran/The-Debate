@@ -16,17 +16,17 @@ const Body = () => {
 const Arguments = () => {
     const router = useRouter()
     const currentVote = useSelector(selectVote)
-    const args = ["Placeholder argument", "Placeholder rebuttal"]
     const sections = ["Pro", "Against"]
 
     return (
         <SecWrapper>
+
             {sections.map((s) => (
                 <Section>
                     <Arg>{s}</Arg>
-                    {args.map((arg) => (
+                    {/* {args.map((arg) => (
                         <Args>This is my argument</Args>
-                    ))}
+                    ))} */}
 
                     {s.toLowerCase() === currentVote && (
                         <Join onClick={()=> router.push(`/discussion/${currentVote}`)}>Join the conversation</Join>
