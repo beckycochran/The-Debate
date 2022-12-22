@@ -30,17 +30,23 @@ export const Button = styled.button`
 //src/menu.js
 export const MenuWrapper = styled.div`
 height: auto;
-min-width: 100px;
-max-width: 150px;
+width: fit-content;
+@media (max-width: 1200px) {
+    max-width: 130px; 
+}
 position: relative;
 display: inline-block;
 z-index: 10;
 position: absolute;
-margin-left: 2vw;
+margin-left: 1.5vw;
 font: inherit;
-background: rgba(34, 34, 34, 0.5)
 `
 export const LI = styled(Button)`
 width: 100%;
 text-align: left;
+margin: 3.5% 0;
+padding: 7% 0;
+&:hover {
+    background: rgba(34, 34, 34, 0.9);
+}
 `

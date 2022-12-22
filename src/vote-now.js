@@ -12,7 +12,7 @@ const VoteNow = () => {
     const [option, setOption] = useState(false);
 
     const addVoteHandler = () => {
-        if (user) {
+        if (user || option.selected === 'abstain') {
             dispatch(changeVote(option.selected));
             router.push(debateRoute)
         } else {
