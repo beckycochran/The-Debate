@@ -1,9 +1,15 @@
 import { useSelector } from "react-redux";
 import { selectVote } from "../store/slices/userSlice";
 import { useRouter } from "next/router"
+import { useDispatch } from "react-redux"
+import { changeVote } from "../store/slices/userSlice"
 import { Wrapper, SecWrapper, Debate, Section, Arg, Args, Join } from "../styles/debate-styles";
 
 const Body = () => {
+    const vote = localStorage.getItem("vote")
+    const dispatch = useDispatch();
+    dispatch(changeVote(vote))
+
     return (
         <Wrapper>
             <Debate>The water is turning the frogs gay</Debate>
@@ -26,7 +32,6 @@ const Arguments = () => {
                     {args.map((arg) => (
                         <Args>This is my argument</Args>
                     ))}
-
                     {s.toLowerCase() === currentVote && (
                         <Join onClick={()=> router.push(`/discussion/${currentVote}`)}>Join the conversation</Join>
                     )}
