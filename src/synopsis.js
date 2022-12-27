@@ -1,4 +1,3 @@
-import GlobalStyles from "../styles/global-styles";
 import { SynopsisWrapper } from "../styles/home-styles";
 
 const Synopsis = () => {

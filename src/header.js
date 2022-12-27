@@ -5,8 +5,6 @@ import { useUser } from "@auth0/nextjs-auth0";
 import { useEffect } from "react";
 import { updateUser } from "../store/slices/userSlice";
 import { useDispatch } from "react-redux";
-import { useSpring, animated } from '@react-spring/web'
-import styled from 'styled-components';
 import { useState } from 'react';
 import Menu from './menu';
 

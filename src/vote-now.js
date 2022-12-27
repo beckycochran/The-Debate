@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux"
 import { useRouter } from "next/router"
 import { useUser } from "@auth0/nextjs-auth0";
 import { useState } from "react"
+
 const VoteNow = () => {
     const { user } = useUser({ redirectTo: debateRoute })
     const dispatch = useDispatch();

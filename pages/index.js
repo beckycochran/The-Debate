@@ -1,5 +1,5 @@
 import GlobalStyles from "../styles/global-styles";
-import { Wrapper, Popup } from "../styles/home-styles";
+import { Wrapper } from "../styles/home-styles";
 import Synopsis from "../src/synopsis";
 import Header from "../src/header";
 import { useRouter } from 'next/router';

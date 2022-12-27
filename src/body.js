@@ -1,4 +1,3 @@
-import { TextButton } from "../styles/styled-components";
 import { useSelector } from "react-redux";
 import { selectVote } from "../store/slices/userSlice";
 import { useRouter } from "next/router"
@@ -35,7 +34,6 @@ const Arguments = () => {
             ))}
         </SecWrapper>
     )
-
 }
 
 export default Body;
