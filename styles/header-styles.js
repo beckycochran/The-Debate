@@ -50,3 +50,8 @@ padding: 7% 0;
     background: rgba(34, 34, 34, 0.9);
 }
 `
+export const MenuIcon = styled.img`
+background-color: inherit;
+min-height: 30px;
+max-height: 50px;
+`

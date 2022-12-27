@@ -1,4 +1,4 @@
-import { Wrapper, Welcome, ButtonContainer, Button } from '../styles/header-styles';
+import { Wrapper, Welcome, ButtonContainer, Button, MenuIcon } from '../styles/header-styles';
 import { useRouter } from 'next/router';
 import { loginRoute, logoutRoute, debateRoute } from "./routes";
 import { useUser } from "@auth0/nextjs-auth0";
@@ -30,7 +30,7 @@ const Header = () => {
             <Wrapper>
                 <ButtonContainer>
                     <Button onClick={() => setToggleMenu(!toggleMenu)}>
-                        <I src="/menu.png" alt="menu" />
+                        <MenuIcon src="/menu.png" alt="menu" />
                     </Button>
                 </ButtonContainer>
                 {user && <Welcome>Welcome {user.name}</Welcome>}
@@ -40,9 +40,4 @@ const Header = () => {
     )
 }
 
-const I = styled.img`
-background-color: inherit;
-min-height: 30px;
-max-height: 50px;
-`
 export default Header;
