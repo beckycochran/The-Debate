@@ -1,7 +1,6 @@
 import GlobalStyles from "../styles/global-styles";
 import Body from "../src/body";
 import Header from "../src/header";
-import Synopsis from "../src/synopsis";
 import { useSelector } from "react-redux";
 import { selectUser, selectVote} from "../store/slices/userSlice";
 
@@ -14,7 +13,6 @@ const Debate = () => {
     <>
       <Header />
       <GlobalStyles />
-      {/* <Synopsis /> */}
       <Body />
     </>
   )

@@ -58,6 +58,8 @@ export default createGlobalStyle`
     line-height: 1.25;
     background: #222;
     color: white;
+    font-family: Verdana;
+    font-weight: 600;
   }
   a {
     color: #69ffcf;

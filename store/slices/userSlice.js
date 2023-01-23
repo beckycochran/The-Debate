@@ -11,6 +11,7 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         changeVote: (state, action) => {
+            console.log(`action.payload: ${action.payload}`)
             state.vote = action.payload
         },
         updateUser: (state, action) => {

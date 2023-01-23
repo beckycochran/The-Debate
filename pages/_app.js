@@ -4,7 +4,6 @@ import { UserProvider } from '@auth0/nextjs-auth0'
 import { store } from "../store/store"
 import { Provider } from "react-redux"
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
