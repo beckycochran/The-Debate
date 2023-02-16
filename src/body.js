@@ -26,11 +26,11 @@ const Arguments = () => {
 
     return (
         <SecWrapper>
-            {sections.map((s) => (
-                <Section>
+            {sections.map((s, i) => (
+                <Section key={i}>
                     <Arg>{s}</Arg>
-                    {args.map((arg) => (
-                        <Args>This is my argument</Args>
+                    {args.map((arg, i) => (
+                        <Args key={i}>This is my argument</Args>
                     ))}
                     {s.toLowerCase() === currentVote && (
                         <Join onClick={()=> router.push(`/discussion/${currentVote}`)}>Join the conversation</Join>
