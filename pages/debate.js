@@ -7,8 +7,7 @@ import { selectUser, selectVote} from "../store/slices/userSlice";
 const Debate = () => {
 
   const currentVote = useSelector(selectVote)
-  const {nickname, name, picture, updated_at} = useSelector(selectUser)
-
+  
   return (
     <>
       <Header />
