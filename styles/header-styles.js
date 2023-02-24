@@ -30,24 +30,27 @@ export const Button = styled.button`
 //src/menu.js
 export const MenuWrapper = styled.div`
 height: auto;
-width: fit-content;
+min-width: 10vw;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 @media (max-width: 1200px) {
     max-width: 130px; 
 }
 position: relative;
-display: inline-block;
 z-index: 10;
 position: absolute;
-margin-left: 1.5vw;
+margin: 0 1.5vw;
 font: inherit;
+padding-right: 1.5vw;
 `
 export const LI = styled(Button)`
 width: 100%;
 text-align: left;
 margin: 3.5% 0;
-padding: 7% 0;
+padding: 7% 1.5vw;
 &:hover {
-    background: rgba(34, 34, 34, 0.9);
+    background: #222;
 }
 `
 export const MenuIcon = styled.img`

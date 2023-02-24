@@ -11,9 +11,9 @@ import { useSelector } from "react-redux";
 import { selectVote } from "../store/slices/userSlice";
 
 const VoteNow = () => {
-    const { user } = useUser({ redirectTo: debateRoute })
     const dispatch = useDispatch();
     const router = useRouter();
+    const { user } = useUser({ redirectTo: debateRoute })
     const [option, setOption] = useState(false);
     const currentVote = useSelector(selectVote)
 
@@ -22,6 +22,10 @@ const VoteNow = () => {
         console.log("POSTED");
         fetch("/api/post-vote", {
             method: "POST",
+            headers: {
+                "Content-type": "application/json",
+                "Accept": "application/json"
+            },
             body: JSON.stringify({ selected: option.selected })
         })
             .then(res => res.json())
@@ -29,13 +33,7 @@ const VoteNow = () => {
             .catch(error => console.log(error))
     }
 
-    const setStorage = () => {
-        localStorage.removeItem("vote");
-        localStorage.setItem("vote", option.selected);
-    }
-
     const addVoteHandler = () => {
-        setStorage()
         dispatch(changeVote(option.selected))
 
         if (user || option.selected === "abstain") {

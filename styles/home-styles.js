@@ -52,7 +52,7 @@ background: #e5c185;
 export const BtnWrapper = styled.div`
 display: flex;
 width: 100%;
-height: 6%;
+// height: 6%;
 flex-direction: row;
 justify-content: flex-end;
 @media (min-width: 1200px) {
@@ -65,6 +65,8 @@ width: 20%;
 max-width: 130px;
 border: none;
 font: inherit;
+padding: 1vh 0;
+margin-top: 1vh;
 border-radius: 3pt;
 display: inline-block;
 &:hover {
