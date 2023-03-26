@@ -22,7 +22,6 @@ const Header = () => {
         }
     }, [user])
 
-
     return (
         <>
             <Wrapper>

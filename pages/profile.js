@@ -1,4 +1,9 @@
+import { Title } from "../styles/misc-styles";
+import Header from "../src/header";
 const Profile = () => {
-    return <h1>My Profile</h1>
+    return <>
+    <Header />
+    <Title>My Profile</Title>
+    </>
 }
 export default Profile;

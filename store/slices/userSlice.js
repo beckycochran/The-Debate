@@ -1,9 +1,10 @@
 //file contains all the reducer logic and actions specifically for the orders
-import { createSlice } from "@reduxjs/toolkit";
+//stuff regarding createAsyncThunk() https://jasonwatmore.com/post/2022/06/21/react-redux-http-post-request-in-async-action-with-createasyncthunk
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
     vote: "not-voted",
-    user: {}
+    user: null
 }
 
 export const userSlice = createSlice({

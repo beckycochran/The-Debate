@@ -1,4 +1,9 @@
+import Header from "../src/header";
+import {Title} from "../styles/misc-styles"
 const Archive = () => {
-    return <h1>Archived Debates</h1>
+    return <>
+    <Header />
+    <Title>Archived Debates</Title>
+    </>
 }
 export default Archive;
